@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_pink"
+    tools:context=".MainActivity">
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#E91E63"
+        android:gravity="start"
+        android:padding="16dp"
+        android:text="AvatarApp"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Base Face -->
+
+    <!-- Brow -->
+    <ImageView
+        android:id="@+id/ivFace"
+        android:layout_width="342dp"
+        android:layout_height="412dp"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/face"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader" />
+
+    <!-- Eye -->
+
+    <!-- Nose -->
+
+    <!-- Mouth -->
+
+    <ImageView
+        android:id="@+id/ivBrow"
+        android:layout_width="151dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="114dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/brow"
+        app:layout_constraintEnd_toEndOf="@id/ivFace"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="@id/ivFace"
+        app:layout_constraintTop_toTopOf="@id/ivFace" />
+
+    <ImageView
+        android:id="@+id/ivEye"
+        android:layout_width="149dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/eye"
+        app:layout_constraintEnd_toEndOf="@id/ivFace"
+        app:layout_constraintStart_toStartOf="@id/ivFace"
+        app:layout_constraintTop_toBottomOf="@id/ivBrow" />
+
+    <!-- Checkbox Container -->
+
+    <ImageView
+        android:id="@+id/ivNose"
+        android:layout_width="25dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="4dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/nose"
+        app:layout_constraintEnd_toEndOf="@id/ivFace"
+        app:layout_constraintStart_toStartOf="@id/ivFace"
+        app:layout_constraintTop_toBottomOf="@id/ivEye" />
+
+    <ImageView
+        android:id="@+id/ivMouth"
+        android:layout_width="63dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/mouth"
+        app:layout_constraintEnd_toEndOf="@id/ivFace"
+        app:layout_constraintStart_toStartOf="@id/ivFace"
+        app:layout_constraintTop_toBottomOf="@id/ivNose" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#80FFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/ivFace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <CheckBox
+            android:id="@+id/cbBrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF9800"
+            android:checked="true"
+            android:text="Brow"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cbEye"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF9800"
+            android:checked="true"
+            android:text="Eye"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cbNose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF9800"
+            android:checked="true"
+            android:text="Nose"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
+        <CheckBox
+            android:id="@+id/cbMouth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#FF9800"
+            android:checked="true"
+            android:text="Mouth"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
